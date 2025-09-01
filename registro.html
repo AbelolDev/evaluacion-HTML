@@ -18,39 +18,46 @@
   </header>
 
   <nav class="blue darken-3 my-5 yellow">
-  <div class="nav-wrapper container">
-    <!-- Imagen como logo -->
-    <a href="/" class="brand-logo center-align flex">
-      <img src="/assets/img/logo.png" alt="MiLogo" style="height: 50px;">
-    </a>
-    <!-- Icono para móvil -->
-    <a href="#" data-target="mobile-demo" class="sidenav-trigger">
-      <i class="material-icons">menu</i>
-    </a>
+    <div class="nav-wrapper container">
+      <!-- Imagen como logo -->
+      <a href="/" class="brand-logo center-align flex">
+        <img src="/assets/img/logo.png" alt="MiLogo" style="height: 50px;">
+      </a>
+      <!-- Icono para móvil -->
+      <a href="#" data-target="mobile-demo" class="sidenav-trigger">
+        <i class="material-icons">menu</i>
+      </a>
 
-    <!-- Links desktop -->
-    <ul class="right hide-on-med-and-down">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="productos.html">Productos</a></li>
-      <!--<li><a href="nosotros.html">Nosotros</a></li>-->
-      <li><a href="registro.html">Nosotros</a></li>
-      <li><a href="registro.html">Registro</a></li>
-      <li><a href="registro.html">Contacto</a></li>
-    </ul>
-  </div>
-</nav>
+      <!-- Links desktop -->
+      <ul class="right hide-on-med-and-down">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="productos.html">Productos</a></li>
+        <!--<li><a href="nosotros.html">Nosotros</a></li>-->
+        <li><a href="registro.html">Nosotros</a></li>
+        <li><a href="registro.html">Registrar usuario</a></li>
+        <li><a href="iniciar.html">Iniciar sesión</a></li>
+        <li><a href="registro.html">blogs</a></li>
+      </ul>
+    </div>
+  </nav>
 
   <!-- Menú lateral para móvil -->
   <ul class="sidenav my-5" id="mobile-demo">
     <li><a href="index.html">Inicio</a></li>
     <li><a href="productos.html">Productos</a></li>
     <li><a href="contacto.html">Contacto</a></li>
+    <li><a href="iniciar.html">Iniciar sesión</a></li>
+    <li><a href="registro.html">Crear usuario</a></li>
+    <li><a href="blogs.html">Blogs</a></li>
   </ul>
 
   <ul class="sidenav" id="mobile-demo">
     <li><a href="index.html">Inicio</a></li>
     <li><a href="contacto.html">Contacto</a></li>
     <li><a href="productos.html">Productos</a></li>
+    <li><a href="iniciar.html">Iniciar sesión</a></li>
+    <li><a href="registro.html">Crear usuario</a></li>
+    <li><a href="blogs.html">Blogs</a></li>
   </ul>
 
   <section class="section container my-5">
@@ -63,7 +70,7 @@
 
               <div class="input-field">
                 <input type="text" id="nombre_completo" name="nombre_completo" required />
-                <label for="fname">Nombre completo</label>
+                <label for="nombre_completo">Nombre completo</label>
               </div>
 
               <div class="input-field">
@@ -80,16 +87,48 @@
               </div>
 
               <div class="input-field">
-                <input type="password" name="password" id="passwd" required />
-                <label for="passwd">Confirmar contraseña</label>
-                <span class="helper-text"
-                  data-error="La contraseña debe tener mínimo 8 caracteres, incluyendo letras y números"
+                <input type="password" name="password" id="passwd_confirm" required />
+                <label for="passwd_confirm">Confirmar contraseña</label>
+                <span class="helper-text" data-error="Las contraseñas no coinciden"
                   data-success="Contraseña válida"></span>
               </div>
 
               <div class="input-field">
-                <input type="text" id="telefono" name="telefono"/>
-                <label for="correo">Teléfono (Opcional)</label>
+                <input type="text" id="telefono" name="telefono" />
+                <label for="telefono">Teléfono (Opcional)</label>
+              </div>
+
+              <!-- Regiones -->
+              <div class="input-field">
+                <select id="region" name="region" required>
+                  <option value="" disabled selected>Selecciona una región</option>
+                  <option value="Arica y Parinacota">Arica y Parinacota</option>
+                  <option value="Tarapacá">Tarapacá</option>
+                  <option value="Antofagasta">Antofagasta</option>
+                  <option value="Atacama">Atacama</option>
+                  <option value="Coquimbo">Coquimbo</option>
+                  <option value="Valparaíso">Valparaíso</option>
+                  <option value="O'Higgins">O'Higgins</option>
+                  <option value="Maule">Maule</option>
+                  <option value="Ñuble">Ñuble</option>
+                  <option value="Biobío">Biobío</option>
+                  <option value="La Araucanía">La Araucanía</option>
+                  <option value="Los Ríos">Los Ríos</option>
+                  <option value="Los Lagos">Los Lagos</option>
+                  <option value="Aysén">Aysén</option>
+                  <option value="Magallanes">Magallanes</option>
+                  <option value="Metropolitana de Santiago">Metropolitana de Santiago</option>
+                  <option value="Los Ríos">Los Ríos</option>
+                </select>
+                <label for="region">Región</label>
+              </div>
+
+              <!-- Provincias -->
+              <div class="input-field">
+                <select id="provincia" name="provincia" required>
+                  <option value="" disabled selected>Selecciona una provincia</option>
+                </select>
+                <label for="provincia">Provincia</label>
               </div>
 
               <button type="submit" class="btn blue darken-3">Enviar</button>
@@ -99,6 +138,7 @@
       </div>
     </div>
   </section>
+
 
   <footer class="page-footer yellow darken-3">
     <div class="container">
