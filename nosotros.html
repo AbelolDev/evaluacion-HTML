@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nosotros</title>
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <link rel="stylesheet" href="/assets/css/style.css" />
+</head>
+
+<body>
+    <header class="center-align my-3">
+        <h1>Sobre Nosotros</h1>
+    </header>
+
+    <nav class="blue darken-3 my-5 yellow">
+        <div class="nav-wrapper container">
+            <a href="#!" class="brand-logo">MiLogo</a>
+            <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+
+            <!-- Links desktop -->
+            <ul class="right hide-on-med-and-down">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="productos.html">Productos</a></li>
+                <li><a href="registro.html">Registro</a></li>
+                <li><a href="nosotros.html">Nosotros</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Menú lateral móvil -->
+    <ul class="sidenav my-5" id="mobile-demo">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="productos.html">Productos</a></li>
+        <li><a href="registro.html">Registro</a></li>
+        <li><a href="nosotros.html">Nosotros</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+    </ul>
+
+    <section class="section container my-5">
+        <div class="row">
+            <div class="col s12 m6">
+                <h4>Nuestra Historia</h4>
+                <p>
+                    Somos una empresa chilena dedicada a la compra y venta de productos
+                    en línea. Desde hace más de 5 años trabajamos para entregar calidad,
+                    confianza y cercanía a todos nuestros clientes.
+                </p>
+                <p>
+                    Nuestro compromiso es brindar una experiencia de compra segura,
+                    sencilla y con productos de primer nivel.
+                </p>
+            </div>
+
+            <div class="col s12 m6">
+                <div class="card">
+                    <div class="card-image">
+                        <img src="assets/img/nosotros.jpg" alt="Equipo de trabajo" />
+                        <span class="card-title">Nuestro Equipo</span>
+                    </div>
+                    <div class="card-content">
+                        <p>
+                            Creemos en el trabajo colaborativo, la innovación y el respeto
+                            hacia nuestros clientes.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Fundadores -->
+        <div class="row center-align">
+            <h4 class="col s12">Fundadores</h4>
+
+            <div class="col s12 m4">
+                <div class="card">
+                    <div class="card-image">
+                        <img src="assets/img/abel.jpg" alt="Abel Aravena" />
+                    </div>
+                    <div class="card-content">
+                        <h6>Abel Aravena</h6>
+                        <p>Visionario y desarrollador principal del proyecto.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col s12 m4">
+                <div class="card">
+                    <div class="card-image">
+                        <img src="assets/img/jose.jpg" alt="José Rojas" />
+                    </div>
+                    <div class="card-content">
+                        <h6>José Rojas</h6>
+                        <p>Especialista en operaciones y logística de ventas.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col s12 m4">
+                <div class="card">
+                    <div class="card-image">
+                        <img src="assets/img/luis.jpg" alt="Luis Paredes" />
+                    </div>
+                    <div class="card-content">
+                        <h6>Luis Paredes</h6>
+                        <p>Responsable de marketing digital y experiencia del cliente.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Valores -->
+        <div class="row center-align">
+            <div class="col s12 m4">
+                <i class="material-icons large blue-text">star</i>
+                <h6>Calidad Garantizada</h6>
+            </div>
+            <div class="col s12 m4">
+                <i class="material-icons large green-text">people</i>
+                <h6>Atención Cercana</h6>
+            </div>
+            <div class="col s12 m4">
+                <i class="material-icons large orange-text">public</i>
+                <h6>Presencia Online</h6>
+            </div>
+        </div>
+    </section>
+
+    <footer class="page-footer yellow darken-3">
+        <div class="container">
+            <div class="row">
+                <div class="col l4 offset-l2 s12">
+                    <h5 class="white-text">Información</h5>
+                    <ul>
+                        <li>
+                            <a class="grey-text text-lighten-3" href="#!">Correo: contacto.empresa@email.com</a>
+                        </li>
+                        <li>
+                            <a class="grey-text text-lighten-3" href="#!">Teléfono: +56 9 5555 5555</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <div class="container">© 2025 Abel Aravena, José Rojas y Luis Paredes</div>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            var elems = document.querySelectorAll(".sidenav");
+            M.Sidenav.init(elems);
+        });
+    </script>
+</body>
+
+</html>
+<!--Hecho por Luis Paredes-->

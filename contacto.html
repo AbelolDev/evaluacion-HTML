@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contacto</title>
+  <link
+    href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    rel="stylesheet"
+  />
+  <link
+    href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="/assets/css/style.css" />
+</head>
+<body>
+  <header class="center-align my-3">
+    <h1>Contacto</h1>
+  </header>
+
+  <nav class="blue darken-3 my-5 yellow">
+    <div class="nav-wrapper container">
+      <a href="#!" class="brand-logo">MiLogo</a>
+      <!-- Icono para móvil -->
+      <a href="#" data-target="mobile-demo" class="sidenav-trigger"
+        ><i class="material-icons">menu</i></a
+      >
+
+      <!-- Links desktop -->
+      <ul class="right hide-on-med-and-down">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="productos.html">Productos</a></li>
+        <li><a href="registro.html">Registro</a></li>
+        <li><a href="nosotros.html">Nosotros</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Menú lateral para móvil -->
+  <ul class="sidenav my-5" id="mobile-demo">
+    <li><a href="index.html">Inicio</a></li>
+    <li><a href="productos.html">Productos</a></li>
+    <li><a href="registro.html">Registro</a></li>
+    <li><a href="nosotros.html">Nosotros</a></li>
+    <li><a href="contacto.html">Contacto</a></li>
+  </ul>
+
+  <section class="section container my-5">
+    <div class="row">
+      <div class="col s12 m8 offset-m2">
+        <div class="card">
+          <div class="card-content">
+            <span class="card-title">Formulario de Contacto</span>
+            <form action="" name="contactForm">
+              <div class="row">
+                <div class="input-field col s12 m6">
+                  <input type="text" id="nombre" name="nombre" required />
+                  <label for="nombre">Nombre</label>
+                </div>
+                
+                <div class="input-field col s12 m6">
+                  <input type="text" id="apellido" name="apellido" required />
+                  <label for="apellido">Apellido</label>
+                </div>
+              </div>
+              
+              <div class="input-field">
+                <input type="email" id="email" name="email" required />
+                <label for="email">Correo electrónico</label>
+              </div>
+              
+              <div class="input-field">
+                <input type="tel" id="telefono" name="telefono" />
+                <label for="telefono">Teléfono (opcional)</label>
+              </div>
+              
+              <div class="input-field">
+                <select id="asunto" name="asunto" required>
+                  <option value="" disabled selected>Selecciona un asunto</option>
+                  <option value="consulta">Consulta general</option>
+                  <option value="soporte">Soporte técnico</option>
+                  <option value="ventas">Información de ventas</option>
+                  <option value="devolucion">Devoluciones</option>
+                  <option value="otro">Otro</option>
+                </select>
+                <label>Asunto</label>
+              </div>
+              
+              <div class="input-field">
+                <textarea id="mensaje" class="materialize-textarea" name="mensaje" required></textarea>
+                <label for="mensaje">Mensaje</label>
+              </div>
+              
+              <div class="input-field">
+                <button type="submit" class="btn blue darken-3 waves-effect waves-light">Enviar mensaje</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="row mt-5">
+      <div class="col s12 m6">
+        <div class="card blue darken-3">
+          <div class="card-content white-text">
+            <span class="card-title">Información de contacto</span>
+            <p><i class="material-icons left">email</i> contacto.empresa@email.com</p>
+            <p><i class="material-icons left">phone</i> +56 9 5555 5555</p>
+            <p><i class="material-icons left">place</i> Av. Principal 123, Santiago, Chile</p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col s12 m6">
+        <div class="card">
+          <div class="card-content">
+            <span class="card-title">Horario de atención</span>
+            <p>Lunes a Viernes: 9:00 - 18:00 hrs</p>
+            <p>Sábados: 10:00 - 14:00 hrs</p>
+            <p>Domingos: Cerrado</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="page-footer yellow darken-3">
+    <div class="container">
+      <div class="row">
+        <div class="col l4 offset-l2 s12">
+          <h5 class="white-text">Información</h5>
+          <ul>
+            <li>
+              <a class="grey-text text-lighten-3" href="#!"
+                >Correo empresarial: contacto.empresa@email.com</a
+              >
+            </li>
+            <li>
+              <a class="grey-text text-lighten-3" href="#!"
+                >Número de contacto: +56 9 5555 5555</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <div class="container">© 2025 Abel Aravena</div>
+    </div>
+  </footer>
+
+  <!-- Materialize JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      // Inicializar menú lateral
+      var elems = document.querySelectorAll(".sidenav");
+      M.Sidenav.init(elems);
+      
+      // Inicializar select
+      var selects = document.querySelectorAll('select');
+      M.FormSelect.init(selects);
+    });
+  </script>
+</body>
+</html>
+<!--Hecho por José Rojas-->
