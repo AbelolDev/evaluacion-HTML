@@ -1,14 +1,18 @@
-// script.js
 document.addEventListener('DOMContentLoaded', function () {
   const form = document.forms['myForm'];
 
-  // Array global para almacenar los datos
+  // Admin
+  const adminUser = {
+    correo: "admin@admin.com",
+    password: "admin1234"
+  };
+
+  // Array global para almacenar datos de usuarios comunes
   const datosForm = [];
 
   const regionSelect = document.getElementById('region');
   const provinciaSelect = document.getElementById('provincia');
 
-  // Diccionario con las provincias de cada región
   const regionesYProvincias = {
     "Arica y Parinacota": ["Arica", "Parinacota"],
     "Tarapacá": ["Iquique", "Pozo Almonte", "Camiña", "Colchane", "Huara"],
@@ -28,19 +32,16 @@ document.addEventListener('DOMContentLoaded', function () {
     "Metropolitana de Santiago": ["Santiago", "Maipú", "La Florida", "Providencia", "Las Condes"],
   };
 
-  // Inicialización de Materialize (selección de dropdown)
+  // Inicialización de selects de Materialize
   M.FormSelect.init(regionSelect);
   M.FormSelect.init(provinciaSelect);
 
-  // Actualiza las provincias cuando se selecciona una región
+  // Actualización dinámica de provincias
   regionSelect.addEventListener('change', function () {
     const regionSeleccionada = regionSelect.value;
     const provincias = regionesYProvincias[regionSeleccionada] || [];
-    
-    // Limpiar las provincias anteriores
+
     provinciaSelect.innerHTML = '<option value="" disabled selected>Selecciona una provincia</option>';
-    
-    // Agregar las nuevas opciones de provincias
     provincias.forEach(provincia => {
       const option = document.createElement('option');
       option.value = provincia;
@@ -48,9 +49,8 @@ document.addEventListener('DOMContentLoaded', function () {
       provinciaSelect.appendChild(option);
     });
 
-    // Habilitar el select de provincias
     provinciaSelect.disabled = provincias.length === 0;
-    M.FormSelect.init(provinciaSelect); // Re-inicializar para que Materialize funcione bien
+    M.FormSelect.init(provinciaSelect);
   });
 
   form.addEventListener('submit', function (e) {
@@ -66,7 +66,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     let valid = true;
 
-    // Validación de los campos
+    // Validación básica
     if (nombreCompleto.value.trim() === '') {
       nombreCompleto.classList.add('invalid');
       valid = false;
@@ -100,7 +100,15 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     if (valid) {
-      const formData = {
+      // Si es admin, redirige al panel de administración
+      if (correo.value === adminUser.correo && passwd.value === adminUser.password) {
+        alert("Bienvenido Administrador");
+        window.location.href = "admin.html";
+        return;
+      }
+
+      // Si no es admin
+      const User = {
         nombre_completo: nombreCompleto.value,
         correo: correo.value,
         telefono: telefono.value,
@@ -108,7 +116,9 @@ document.addEventListener('DOMContentLoaded', function () {
         provincia: provincia.value,
       };
 
-      console.log("Datos del formulario:", formData);
+      datosForm.push(User);
+      console.log("Usuario registrado:", User);
+      alert("Usuario registrado correctamente");
     }
   });
 
