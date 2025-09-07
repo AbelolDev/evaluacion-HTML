@@ -1,22 +1,116 @@
-<main class="container">
-  <h5>Lista de productos</h5>
-  <table class="highlight responsive-table">
-    <thead>
-      <tr>
-        <th>Nombre</th>
-        <th>Precio</th>
-        <th>Acciones</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>Producto demo</td>
-        <td>$5000</td>
-        <td>
-          <a href="producto-editar.html" class="btn-small blue"><i class="material-icons">edit</i></a>
-          <a href="#!" class="btn-small red"><i class="material-icons">delete</i></a>
-        </td>
-      </tr>
-    </tbody>
-  </table>
-</main>
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lista de Productos</title>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/assets/css/style.css" />
+  </head>
+
+  <body>
+    <nav class="yellow darken-3">
+      <div class="nav-wrapper container">
+        <a href="../admin.html" class="brand-logo">Admin</a>
+        <a href="#" data-target="mobile-demo" class="sidenav-trigger">
+          <i class="material-icons">menu</i>
+        </a>
+        <ul class="right hide-on-med-and-down">
+          <li><a href="producto-nuevo.html">Nuevo producto</a></li>
+          <li><a href="producto-lista.html">Lista de productos</a></li>
+          <li><a href="/admin_panel.html">Dashboard</a></li>
+          <li><a href="/index.html">Cerrar sesión</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <ul class="sidenav" id="mobile-demo">
+      <li><a href="producto-nuevo.html">Nuevo producto</a></li>
+      <li><a href="producto-lista.html">Lista de productos</a></li>
+      <li><a href="/admin_panel.html">Dashboard</a></li>
+      <li><a href="/index.html">Cerrar sesión</a></li>
+    </ul>
+
+    <main class="container my-5">
+      <h5>Lista de productos</h5>
+      <table class="highlight responsive-table">
+        <thead>
+          <tr>
+            <th>Nombre</th>
+            <th>Precio</th>
+            <th>Acciones</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Producto demo</td>
+            <td>$5000</td>
+            <td>
+              <a href="producto-editar.html?id=1" class="btn-small blue">
+                <i class="material-icons">edit</i>
+              </a>
+              <a href="#!" class="btn-small red">
+                <i class="material-icons">delete</i>
+              </a>
+            </td>
+          </tr>
+          <tr>
+            <td>Producto ejemplo</td>
+            <td>$8500</td>
+            <td>
+              <a href="producto-editar.html?id=2" class="btn-small blue">
+                <i class="material-icons">edit</i>
+              </a>
+              <a href="#!" class="btn-small red">
+                <i class="material-icons">delete</i>
+              </a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="fixed-action-btn">
+        <a
+          href="producto-nuevo.html"
+          class="btn-floating btn-large green tooltipped"
+          data-tooltip="Agregar producto"
+        >
+          <i class="material-icons">add</i>
+        </a>
+      </div>
+    </main>
+
+    <footer class="page-footer yellow darken-3">
+      <div class="container">
+        <div class="row">
+          <div class="col s12">
+            <h5 class="white-text">Gestión de Productos</h5>
+            <p class="grey-text text-lighten-4">
+              Administra, edita o elimina los productos disponibles.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="footer-copyright">
+        <div class="container">© 2025 Abel Aravena</div>
+      </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        var elems = document.querySelectorAll(".sidenav");
+        M.Sidenav.init(elems);
+        var tooltips = document.querySelectorAll(".tooltipped");
+        M.Tooltip.init(tooltips);
+      });
+    </script>
+  </body>
+</html>

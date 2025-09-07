@@ -19,22 +19,54 @@
         <i class="material-icons">menu</i>
       </a>
       <ul class="right hide-on-med-and-down">
-        <li><a href="admin-productos.html">Productos</a></li>
-        <li><a href="admin-usuarios.html">Usuarios</a></li>
+        <li><a href="/admin-productos/producto-lista.html">Productos</a></li>
+        <li><a href="/admin-usuarios/usuario-lista.html">Usuarios</a></li>
         <li><a href="index.html">Cerrar sesión</a></li>
       </ul>
     </div>
   </nav>
 
+  <!-- SIDENAV -->
   <ul class="sidenav" id="mobile-demo">
-    <li><a href="admin-productos.html">Productos</a></li>
-    <li><a href="admin-usuarios.html">Usuarios</a></li>
+    <li><a href="/admin-productos/producto-lista.html">Productos</a></li>
+    <li><a href="/admin-usuarios/usuario-lista.html">Usuarios</a></li>
     <li><a href="index.html">Cerrar sesión</a></li>
   </ul>
 
-  <!-- DASHBOARD -->
   <main class="container my-5">
     <h4 class="center-align">Bienvenido al Panel Administrativo</h4>
+
+    <div class="row center-align">
+      <div class="col s12 m6 l3">
+        <div class="card-panel teal white-text">
+          <i class="material-icons">shopping_cart</i>
+          <h5>120</h5>
+          <p>Productos</p>
+        </div>
+      </div>
+      <div class="col s12 m6 l3">
+        <div class="card-panel blue white-text">
+          <i class="material-icons">group</i>
+          <h5>45</h5>
+          <p>Usuarios</p>
+        </div>
+      </div>
+      <div class="col s12 m6 l3">
+        <div class="card-panel orange white-text">
+          <i class="material-icons">assessment</i>
+          <h5>15</h5>
+          <p>Reportes</p>
+        </div>
+      </div>
+      <div class="col s12 m6 l3">
+        <div class="card-panel red white-text">
+          <i class="material-icons">warning</i>
+          <h5>3</h5>
+          <p>Alertas</p>
+        </div>
+      </div>
+    </div>
+
     <div class="row">
       <div class="col s12 m6">
         <div class="card">
@@ -44,7 +76,7 @@
             <p>Gestiona los productos de la tienda.</p>
           </div>
           <div class="card-action center">
-            <a href="admin_productos.html" class="btn green">Ir a productos</a>
+            <a href="/admin-productos/producto-lista.html" class="btn green">Ir a productos</a>
           </div>
         </div>
       </div>
@@ -56,7 +88,7 @@
             <p>Gestiona los usuarios registrados.</p>
           </div>
           <div class="card-action center">
-            <a href="admin_usuarios.html" class="btn blue">Ir a usuarios</a>
+            <a href="/admin-usuarios/usuario-lista.html" class="btn blue">Ir a usuarios</a>
           </div>
         </div>
       </div>
